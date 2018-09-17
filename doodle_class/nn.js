@@ -7,6 +7,7 @@ function dsigmoid(y) {
     return y * (1 - y);
 }
 
+
 class NeuralNetwork {
 
     constructor(input_nodes, hidden_nodes, output_nodes) {
@@ -60,7 +61,7 @@ class NeuralNetwork {
         // Calculate the error
         // ERROR = TARGETS - OUTPUTS
         let output_errors = Matrix.subtract(targets, outputs);
-  
+
         // let gradient = outputs * (1 - outputs);
         // Calculate gradient
         let gradients = Matrix.map(outputs, dsigmoid);
